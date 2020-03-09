@@ -27,4 +27,4 @@ Clone the starter project i.e https://github.com/bikash-b/micro-fed.git.
 
 Install the required npm packages required by the root application and the other micro frontend applications. Just use below below command in project root directory as well as other micro forntend directories.
 
-> >npm install
+> npm install
