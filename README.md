@@ -14,3 +14,15 @@ It works based on following steps,
 * Integrating the frontends/frontend components runing at the runtime as SPA container
 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontend%20architecture.png)
+
+## How to use
+
+As the starter project is ready to use, follow the below steps to start with micro frontends.
+
+### Clone the starter project
+
+Clone the starter project i.e https://github.com/bikash-b/micro-fed.git.
+
+### Install the required packages
+
+
