@@ -2,4 +2,4 @@
 
 [![micro fed](https://github.com/bikash-b/micro-fed/blob/master/assets/icon.png)](#features)
 
-A simple micro service approach in front end
+Micro FED is a micro service based front ends. In this we can build front end using various components using Angular, React and Vue.  
