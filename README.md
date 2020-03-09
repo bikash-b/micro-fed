@@ -12,3 +12,5 @@ It works based on following steps,
 * Exporting the different forntend components into native web components.
 * Testing and building the frontends.
 * Integrating the frontends/frontend components runing at the runtime as SPA container
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/icon.png)
