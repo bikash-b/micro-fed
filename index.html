@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <base href="/" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body{
+            margin: 10px !important;
+            width: 96%;
+        }
+
+        .pad{
+            padding: 20px;
+        }
+
+        .mg-top-10{
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <name-block></name-block>
+    <router-slot></router-slot>
+    <script type="module">
+        import "https://unpkg.com/router-slot?module";
+
+        customElements.whenDefined("router-slot").then(async () => {
+            const routerSlot = document.querySelector("router-slot");
+            await routerSlot.add([
+              {
+                path: "angular-comp",
+                component: () => {
+                    const vueElem = document.createElement('ng-root-el');
+                    const vueElContainer =  document.createElement("div");
+                    if (vueElContainer.children.length > 0) {
+                        vueElContainer.removeChild(vueElContainer.children[0]);
+                    }
+                    vueElContainer.appendChild(vueElem);
+                    return vueElContainer;
+                } 
+              },
+              {
+                path: "home",
+                component: () => {
+                    const basicInfo = `<div class="row mg-top-10">
+                        <div class="col">
+                        <div class="card">
+                            <h2 class="card-body">
+                                Micro frontend
+                            </h2>
+                            <div class="card-body">
+                                <ul>
+                                    <li>A web component based micro frontend.</li>
+                                </ul>
+                                <ul>
+                                    <li>Any ui components such as Angular, React, Vue, etc can integrated and work together.</li>
+                                </ul>
+                                <ul>
+                                    <li>Special features like application routing, data binding.</li>
+                                </ul>
+                                <ul>
+                                    <li>Easy integration of any CSS framework or library like Bootstrap, Material, etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>`;
+                    const basicInfoContainer = document.createElement('div');
+                    basicInfoContainer.innerHTML = basicInfo;
+                    const parentContainer = document.createElement("div");
+                    parentContainer.appendChild(basicInfoContainer);
+                    
+                    // Root container
+                    const rootContainer = document.createElement("div");
+                    rootContainer.setAttribute('class', 'row');
+
+                    // React component integration
+                    const reactEl = document.createElement('react-el');
+
+                    const reactElContainer =  document.createElement("div");
+                    reactElContainer.setAttribute('class', 'pad')
+                    if (reactElContainer.children.length > 0) {
+                    reactElContainer.removeChild(reactElContainer.children[0]);
+                    }
+                    reactElContainer.appendChild(reactEl);
+
+                    // Angular component integration
+                    const ngRoot = document.createElement("div");
+                    ngRoot.setAttribute('class', 'pad')
+                    const ngRootElem = document.createElement('ng-root-el');
+                    ngRootElem.addEventListener('helloEvt', (e) => onRowClick(e, reactElContainer));
+                    if (ngRoot.children.length > 0) {
+                    ngRoot.removeChild(ngRoot.children[0]);
+                    }
+                    ngRoot.appendChild(ngRootElem);
+
+                    rootContainer.appendChild(ngRoot);
+                    rootContainer.appendChild(reactElContainer);
+                    parentContainer.appendChild(rootContainer);
+
+                    return parentContainer;
+                } 
+
+              },
+              {
+                path: "**",
+                redirectTo: "home"
+              }
+            ]);
+        });
+
+        function onRowClick(e, reactElContainer){
+            // props = JSON.stringify(e.details);
+            // console.log(e)
+            reactElContainer.getElementsByTagName('react-el')[0].setAttribute('props', JSON.stringify(e.detail));
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="http://localhost:5001/main.js"></script>
+    <script src="http://localhost:5002/main.js"></script>
+    <!-- <script src="http://localhost:5003/main.js"></script> -->
+    <script src="http://localhost:5003/name-block.js"></script>
+  </body>
+</html>

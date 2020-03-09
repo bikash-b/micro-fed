@@ -1,0 +1,22 @@
+{
+  "name": "micro-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -l 4200"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@angular/cli": "^9.0.3",
+    "@hyperapp/router": "^0.7.2",
+    "@stencil/core": "^1.8.9",
+    "hyperapp": "^2.0.4",
+    "lit-element": "^2.2.1",
+    "npx": "^10.2.2",
+    "simple-wc-router": "^2.3.4"
+  }
+}
