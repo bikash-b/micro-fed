@@ -202,3 +202,7 @@ For React
 For Vue
 
 > vue-cli-service build --target wc --name vue-web-components 'src/components/*.vue'
+
+The above command will generate single JavaScript file and which needs to be deployed and run as like as a service in backend system.
+
+![Micro build and deployment](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20build%20and%20deployment.png)
