@@ -188,3 +188,17 @@ const VueWebComponent = wrap(Vue, VueComponent)
 
 window.customElements.define('vue-web-component', VueWebComponent)
 ```
+
+Only configuration is not enough to export the micro frontend components to web components, you need to run below build commands to generate the web components.
+
+For Angular
+
+> ng build --prod --output-hashing none --single-bundle true
+
+For React
+
+> webpack --mode production
+
+For Vue
+
+> vue-cli-service build --target wc --name vue-web-components 'src/components/*.vue'
