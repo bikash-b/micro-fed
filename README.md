@@ -58,3 +58,9 @@ team Vue     --> vue-fed
 
 ![Micro frontend team work](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontend%20team%20work.png)
 
+For Angular frontend development, Angular-CLI can be used as the platform to support.
+
+For React.js frontend development react, babel and webpack can be combinely used.
+
+For Vue.js frontend development Vue-CLI can be used as the platform to support.
+
