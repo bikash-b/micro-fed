@@ -74,7 +74,11 @@ Follow below command to run the frontends in development mode,
 
 ### Exporting micro frontend components into web component
 
-As it uses web components as the key elements to build micro forntend, it needs to be export the micro frontend component into web components. Follow the below tecniques to get the web components.
+As it uses web components as the key elements to build micro forntend, it needs to be export the micro frontend component into web components. 
+
+![Exporting micro frontend components to web components](https://github.com/bikash-b/micro-fed/blob/master/assets/Exporting%20micro%20frontend%20components%20to%20web%20components.png)
+
+Follow the below tecniques to get the web components.
 
 #### Angular components as web components
 
