@@ -15,6 +15,21 @@ It works based on following steps,
 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontend%20architecture.png)
 
+## Prerequisites
+
+To design and develop micro frontend, you must have idea on following,
+
+* HTML, CSS and JavaScript
+* How a forntend works in a client-server architecture
+* Monolithic architecture
+* Any one framework/library i.e Angular, React.js or Vue.js
+* Node and NPM 
+* Webpack and Babel
+
+To start working on micro frontend, you must have following environment
+
+* Node.js ( latest stable version i.e 12.16.1 )
+
 ## How to use
 
 As the starter project is ready to use, follow the below steps to start with micro frontends.
@@ -28,3 +43,5 @@ Clone the starter project i.e https://github.com/bikash-b/micro-fed.git.
 Install the required npm packages required by the root application and the other micro frontend applications. Just use below below command in project root directory as well as other micro forntend directories.
 
 > npm install
+
+### 
