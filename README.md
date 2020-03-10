@@ -56,4 +56,5 @@ Team React   --> react-fed
 
 team Vue     --> vue-fed
 
+![Micro frontend team work](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontend%20team%20work.png)
 
