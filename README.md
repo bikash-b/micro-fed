@@ -44,4 +44,14 @@ Install the required npm packages required by the root application and the other
 
 > npm install
 
-### 
+### Designing and implementing the components
+
+There may be indivisual and independent team can be responsible for each micro frontends.
+
+If you open the folder demo-frontends, you see there are three micro frontends available i.e angular-fed, react-fed and vue-fed. Each frontend can be mantained by respective team as follows,
+
+Team Angular --------------> angular-fed
+Team React   --------------> react-fed
+team Vue     --------------> vue-fed
+
+
