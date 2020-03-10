@@ -175,3 +175,16 @@ class ReactWebComponent extends HTMLElement {
 customElements.define('react-web-component', ReactWebComponent);
 
 ```
+### Vue components as web components
+
+Just similar to Angular and React, you need to configure the main.js to export Vue components as web components.
+
+```javascript
+import Vue from 'vue'
+import wrap from '@vue/web-component-wrapper'
+import VueComponent from './components/VueComponent.vue';
+
+const VueWebComponent = wrap(Vue, VueComponent)
+
+window.customElements.define('vue-web-component', VueWebComponent)
+```
