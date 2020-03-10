@@ -72,7 +72,7 @@ Follow below command to run the frontends in development mode,
 
 * Use *npm serve* or *vue-cli-service* serve to run Vue.js project.
 
-### Exporting micro frontend components into web component
+### Exporting micro frontend components as web components
 
 As it uses web components as the key elements to build micro forntend, it needs to be export the micro frontend component into web components. 
 
@@ -125,5 +125,53 @@ export class AppModule {
 
   }
 }
+
+```
+
+#### React components as web components
+
+To export React components as web components, the below configuration needs to be provided in the index.js.
+
+```javascript
+import React from 'react';
+import App from './App';
+import { render, unmountComponentAtNode } from 'react-dom';
+
+
+class ReactWebComponent extends HTMLElement {
+  
+  constructor() {
+    super();
+    this.observer = new MutationObserver(() => this.update());
+    this.observer.observe(this, { attributes: true });
+  }
+
+  connectedCallback() {
+    this._innerHTML = this.innerHTML;
+    this.mount();
+  }
+
+  disconnectedCallback() {
+    this.unmount();
+    this.observer.disconnect();
+  }
+
+  update() {
+    this.unmount();
+    this.mount();
+  }
+
+  mount() {
+    const props = {...};
+    render(<App {...props} />, this);
+  }
+
+  unmount() {
+    unmountComponentAtNode(this);
+  }
+
+}
+
+customElements.define('react-web-component', ReactElement);
 
 ```
