@@ -84,7 +84,7 @@ Follow the below tecniques to get the web components.
 
 You need to configure the Angular's root module ( e.g AppModule ) for exporting the Angular components into web components.
 
-```
+```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
@@ -118,7 +118,7 @@ export class AppModule {
     ..........
 
     // define in browser registry
-    customElements.define('ng-el', ngCustomElement);
+    customElements.define('ng-web-component', ngCustomElement);
     ..........
     ..........
     ..........
