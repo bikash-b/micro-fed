@@ -66,8 +66,8 @@ team Vue     --> vue-fed
 
 Follow below command to run the frontends in development mode,
 
-* Use ng serve to run Angular project.
+* Use *ng serve* to run Angular project.
 
-* Use npm serve or webpack-dev-server --config ./webpack.config.js --mode development to run React.js project.
+* Use *npm serve* or *webpack-dev-server --config ./webpack.config.js --mode development* to run React.js project.
 
-* Use npm serve or vue-cli-service serve to run Vue.js project.
+* Use *npm serve* or *vue-cli-service* serve to run Vue.js project.
