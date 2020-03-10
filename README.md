@@ -71,3 +71,10 @@ Follow below command to run the frontends in development mode,
 * Use *npm serve* or *webpack-dev-server --config ./webpack.config.js --mode development* to run React.js project.
 
 * Use *npm serve* or *vue-cli-service* serve to run Vue.js project.
+
+### Exporting micro frontend components into web component
+
+As it uses web components as the key elements to build micro forntend, it needs to be export the micro frontend component into web components. Follow the below tecniques to get the web components.
+
+#### Angular components as web components
+
