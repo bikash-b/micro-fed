@@ -134,7 +134,7 @@ To export React components as web components, the below configuration needs to b
 
 ```javascript
 import React from 'react';
-import App from './App';
+import ReactComponent from './ReactComponent';
 import { render, unmountComponentAtNode } from 'react-dom';
 
 
@@ -172,6 +172,6 @@ class ReactWebComponent extends HTMLElement {
 
 }
 
-customElements.define('react-web-component', ReactElement);
+customElements.define('react-web-component', ReactWebComponent);
 
 ```
