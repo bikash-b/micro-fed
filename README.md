@@ -218,4 +218,6 @@ Once you are done with above steps, you will be able to use the micro frontends 
 
 ## Communicatiing micro frontend components
 
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontends%20communication.png)
+
 We won't be working only on static UI pages. As the data vary based on certain conditions so the values in the UI pages needs to changed. So the data bind shoud work for the components. And to communicating among the micro frontend components we need event binding. Each framework or library has its own way of implementation. So we can follow them to make this possible. Also we can use plain JavaScript attribute and event binding.
