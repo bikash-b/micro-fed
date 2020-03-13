@@ -208,3 +208,14 @@ The above command will generate single JavaScript file with in a dist folder and
 ![Micro build and deployment](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20build%20and%20deployment.png)
 
 ## Micro frontends all together
+
+Once you are done with above steps, you will be able to use the micro frontends any where irrespective of any frontend frameworks or libraries. Below are use of the micro frontends.
+
+* Integrating Angular components, React.js components and Vue.js components together in a SPA.
+* Integrating React.js components and Vue.js components in Angular templates.
+* Integrating Angular micro components and Vue.js components in React.js UI.
+* Integrating React.js components and Angular components in Vue.js UI.
+
+## Communicatiing micro frontend components
+
+We won't be working only on static UI pages. As the data vary based on certain conditions so the values in the UI pages needs to changed. So the data bind shoud work for the components. And to communicating among the micro frontend components we need event binding. Each framework or library has its own way of implementation. So we can follow them to make this possible. Also we can use plain JavaScript attribute and event binding.
