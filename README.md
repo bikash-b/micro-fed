@@ -221,3 +221,13 @@ Once you are done with above steps, you will be able to use the micro frontends 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontends%20communication.png)
 
 We won't be working only on static UI pages. As the data vary based on certain conditions so the values in the UI pages needs to changed. So the data bind shoud work for the components. And to communicating among the micro frontend components we need event binding. Each framework or library has its own way of implementation. So we can follow them to make this possible. Also we can use plain JavaScript attribute and event binding.
+
+## Unit testing
+
+Unit testing needs to be performed indivisual micro frontend project level. There are different frameworks available for writting unit cases and generating code coverage report. Some known testing frameworks are Karma with Jasmine, Chai with Mocha, Jest, etc.
+
+## Building micro frontends
+
+## Deploying micro frontends
+
+## Including AR ( Augmented Reality ) component - Aditional
