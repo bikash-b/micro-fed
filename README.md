@@ -569,15 +569,25 @@ Following are the syntax to emmitting event, event binding, attribute declaring 
 
     Framework
       or
-    library       Attribute declaring       Attribute use           Attribute binding       Event emitting        Event binding
-    ---------     -------------------       -----------------       --------------          -------------         -------------
-    Angular       @Input() attributeName    [attributeName]=""      {{attributeName}}       @Output() onEvent: 
-                                                                                            EventEmitter = new 
-                                                                                            EventEmitter()
+    library       Attribute declaring       Attribute binding       Event emitting            Event binding
+    ---------     -------------------       -----------------       --------------            -------------      
+    Angular       @Input() attributeName    {{attributeName}}       @Output() onEvent:        (onEvent)="Event handeler"    
+                                                                    (onEvent)="event"
+                                                                    EventEmitter = new 
+                                                                    EventEmitter()
     
-    React         props.attributeName       attributeName=""        {props.attributeName}
+    React         props.attributeName       {props.attributeName}   this.elementRef            onEvent="Event handeler"
+                                                                    onEvent="event"
+                                                                    .current.
+                                                                    dispatchEvent(new 
+                                                                    CustomEvent('onEvent', 
+                                                                    {bubbles: true, detail: 
+                                                                    { data: this.state.data 
+                                                                    }}))
     
-    Vue           props: ['attributeName']  attribute-name=""       {{attributeName}}
+    Vue           props: ['attributeName']  {{attributeName}}       this.$emit('onEvent',      @onEvent="Event handeler"
+                                                                    @onEvent="Event handeler"
+                                                                    this.onEvent)
 
 ## Unit testing
 
