@@ -15,6 +15,24 @@ It works based on following steps,
 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontend%20architecture.png)
 
+## Basic principle
+
+It works on the principle that "*each UI can be devided into many smaller pieces called components or micro compoments, which not only gives more flexible, reusable and mocular way to manage the frontends but also increases the performance and testability of the frontends*".
+
+So a micro frontend component can be implement in such a way, it can be integrated anywhere irrespective of any frameworks or libraries. For example a REST full API can used used any where irrespective of any technologies and this is posible as it works on a protocol for taking input and giving output in JSON format, JSON is the common language for any technologies to communicate each other. 
+
+Similarly there should be something common channel for frontends to communicate each other, which is nothing but web components. According to MDN ( Mozilla Developer Network ) "Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps".In current approach of implementing micro frontends, web components play key role.
+
+So basically we have to transform a component created using a framework or library to web component which can be used in orher UI platform. 
+
+A component will have following parts, 
+
+* Inputs or attributes
+* Outputs or events
+* styles
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Component.png)
+
 ## Prerequisites
 
 To design and develop micro frontend, you must have idea on following,
