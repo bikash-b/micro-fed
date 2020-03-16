@@ -40,6 +40,9 @@ An Angular component code,
 ***hello-world.component.ts***
 
 ```javascript
+// Import statements
+import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector:    'hello-world',
   template: `
@@ -70,6 +73,7 @@ A React component code,
 ***HelloWorldComponent.js***
 
 ```javascript
+// Import statements
 import React from 'react';
 
 class HelloWorldComponent extends React.Component {
@@ -108,6 +112,66 @@ class HelloWorldComponent extends React.Component {
 }
 
 export default WebComponentTest;
+```
+
+A Vue component code,
+
+***HelloWorldComponent.vue***
+
+```javascript
+<template>
+  <div>
+    <h1 v-on:click="getMessage">{{message}}</h1>
+  </div>
+</template>
+
+<script>
+
+// Import statements
+
+export default {
+  name: 'HelloWorldComponent',
+  components: {
+    // Dependant components
+  },
+  data() {
+    return {
+      message: 'Hello World'
+    }
+  },
+  methods: {
+    getMessage(){
+      
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  body{
+    color: "000000";
+  }
+</style>
+
+```
+
+A Web component component code,
+
+```javascript
+class HelloWorldComponent extends HTMLElement {
+  
+  constructor(){
+    super();
+  }
+  
+  // Life cycle methods
+  connectedCallback() {
+    this.innerHTML = `<h1>Hello world</h1>`;
+  }
+}
+    
+customElements.define('hello-world-component', HelloWorldComponent);
 ```
 
 ## Prerequisites
