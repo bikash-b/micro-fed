@@ -567,9 +567,17 @@ We won't be working only on static UI pages. As the data vary based on certain c
 
 Following are the syntax to emmitting event, event binding, attribute declaring and binding.
 
-    SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
-    --------- ------- ---- -------  ----------- ---------- ----------- -----------
-    base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+    Framework
+      or
+    library       Attribute declaring       Attribute use           Attribute binding       Event emitting        Event binding
+    ---------     -------------------       -----------------       --------------          -------------         -------------
+    Angular       @Input() attributeName    [attributeName]=""      {{attributeName}}       @Output() onEvent: 
+                                                                                            EventEmitter = new 
+                                                                                            EventEmitter()
+    
+    React         props.attributeName       attributeName=""        {props.attributeName}
+    
+    Vue           props: ['attributeName']  attribute-name=""       {{attributeName}}
 
 ## Unit testing
 
