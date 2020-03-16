@@ -565,6 +565,12 @@ new Vue({
 
 We won't be working only on static UI pages. As the data vary based on certain conditions so the values in the UI pages needs to changed. So the data bind shoud work for the components. And to communicating among the micro frontend components we need event binding. Each framework or library has its own way of implementation. So we can follow them to make this possible. Also we can use plain JavaScript attribute and event binding.
 
+Following are the syntax to emmitting event, event binding, attribute declaring and binding.
+
+    SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
+    --------- ------- ---- -------  ----------- ---------- ----------- -----------
+    base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+
 ## Unit testing
 
 Unit testing needs to be performed indivisual micro frontend project level. There are different frameworks available for writting unit cases and generating code coverage report. Some known testing frameworks are Karma with Jasmine, Chai with Mocha, Jest, etc.
