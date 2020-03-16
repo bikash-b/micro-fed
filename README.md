@@ -158,6 +158,8 @@ export default {
 
 A Web component component code,
 
+***HelloWorldComponent.js***
+
 ```javascript
 class HelloWorldComponent extends HTMLElement {
   
