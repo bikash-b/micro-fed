@@ -425,7 +425,7 @@ Import all the micro frontend modules directly from clound and the supporting JS
 
 ***index.html***
 
-```javascript
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -476,6 +476,7 @@ Import all the micro frontend modules directly from clound and the supporting JS
 
 ***index.html***
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -495,8 +496,9 @@ Import all the micro frontend modules directly from clound and the supporting JS
     <script src="https://unpkg.com/vue"></script>
 
     <!-- Micro frontend modules -->
-    <script src="http://localhost:5001/main.js"></script>
-    <script src="http://localhost:5003/vue-web.min.js"></script>
+    <script src="http://cloud.com/angular-mf-module.js"></script>
+    <script src="http://cloud.com/react-mf-module.js"></script>
+    <script src="http://cloud.com/vue-mf-module.js"></script>
 
     <title>React Application</title>
   </head>
@@ -505,8 +507,57 @@ Import all the micro frontend modules directly from clound and the supporting JS
     <div id="root"></div>
   </body>
 </html>
+```
 
 Now we can access the micro frontends in any of the React.js components.
+
+### Integrating React.js components and Angular components in Vue.js UI
+
+This is the scenario where we will be using Angular as the main platform for wrapping the micro frontends. To achieve this, below steps needs to followed,
+
+Import all the micro frontend modules directly from clound and the supporting JS libraries in index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <!-- Supporting JS modules -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+
+    <!-- Micro frontend modules -->
+    <script src="http://cloud.com/angular-mf-module.js"></script>
+    <script src="http://cloud.com/react-mf-module.js"></script>
+    <script src="http://cloud.com/vue-mf-module.js"></script>
+    
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+
+  </body>
+</html>
+```
+
+We have to inform Vue compiler that the micro frontends are ingnored.
+
+```javascript
+Vue.config.ignoredElements = [
+  'angular-component',
+  'react-component'
+]
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+```
 
 ## Communicatiing micro frontend components
 
