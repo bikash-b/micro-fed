@@ -570,7 +570,7 @@ Following are the syntax to emmitting event, event binding, attribute declaring 
     Framework
       or
     library       Attribute declaring       Attribute binding       Event emitting            Event binding
-    ---------     -------------------       -----------------       --------------            -------------      
+    ---------     ----------------------    -----------------       ------------------        -------------------------      
     Angular       @Input() attributeName    {{attributeName}}       @Output() onEvent:        (onEvent)="Event handeler"    
                                                                     (onEvent)="event"
                                                                     EventEmitter = new 
