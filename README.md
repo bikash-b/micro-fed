@@ -417,11 +417,11 @@ In this we can use any SPA framework or library as the primary platform for rout
 </html>
 ```
 
-### Integrating React.js components and Vue.js components in Angular templates.
+### Integrating React.js components and Vue.js components in Angular templates
 
 This is the scenario where we will be using Angular as the primary platform for wrapping the micro frontends. To achieve this, below steps needs to followed,
 
-*Import all the micro frontend modules directly from clound and the supporting JS libraries in index.html
+Import all the micro frontend modules directly from clound and the supporting JS libraries in index.html
 
 ***index.html***
 
@@ -467,6 +467,46 @@ As the micro frontend components act as web components which are custom HTML ele
 ```
 
 Now we can access the micro frontends in any of the Angular components.
+
+### Integrating Angular micro components and Vue.js components in React.js UI
+
+In this scenario we will be using React.js as the base platform to wrap micro frontends. To do so follow the below steps,
+
+Import all the micro frontend modules directly from clound and the supporting JS libraries in index.html
+
+***index.html***
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Supporting JS modules -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+
+    <!-- Micro frontend modules -->
+    <script src="http://localhost:5001/main.js"></script>
+    <script src="http://localhost:5003/vue-web.min.js"></script>
+
+    <title>React Application</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+
+Now we can access the micro frontends in any of the React.js components.
 
 ## Communicatiing micro frontend components
 
