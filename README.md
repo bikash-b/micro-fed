@@ -595,6 +595,24 @@ Unit testing needs to be performed indivisual micro frontend project level. Ther
 
 ## Building micro frontends
 
+Each micro frontend platform has its own way of building the codes. Below are the different commands to build different platform based micro frontends.
+
+Framework
+   or
+library       Command                                 Generated folder                Configuration file
+---------     ----------------------                  ----------------                ------------------
+Angular       ng build                                dist/main.js                    angular.json
+              --prod 
+              --output-hashing none 
+              --single-bundle true
+
+React         webpack                                 dist/main.js                    webpack.config.js
+              --mode production
+
+Vue           vue-cli-service build 
+              --target wc 
+              --name vue-web 'src/components/*.vue'   dist/main.js                    babel.config.js
+
 ## Deploying micro frontends
 
 ## Including AR ( Augmented Reality ) component - Aditional
