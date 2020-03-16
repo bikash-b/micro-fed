@@ -33,6 +33,83 @@ A component will have following parts,
 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Component.png)
 
+### Code differences
+
+An Angular component code,
+
+***hello-world.component.ts***
+
+```javascript
+@Component({
+  selector:    'hello-world',
+  template: `
+    <div> {{ message }} </div>
+  `
+})
+export class HeroListComponent implements OnInit {
+  
+  // Class variable declaration and initialization if needed
+  message: string = "Hello World";
+
+  constructor(DI){}
+  
+  // Life cycle methods
+  ngOnInit(){
+  
+  }
+  
+  // Other methods
+  getMessage(){
+  
+  }
+}
+```
+
+A React component code,
+
+***HelloWorldComponent.js***
+
+```javascript
+import React from 'react';
+
+class HelloWorldComponent extends React.Component {
+
+    constructor(props){
+        super(props);
+        
+        // State variables
+        this.state = {
+            message: 'Hello World'
+        };
+        
+        // Events binding
+        this.onEventHandle = this.onEventHandle.bind(this);
+    }
+
+    // Life cycle methods
+    componentDidMount(){
+        
+    }
+
+    // Event handeling methods
+    onEventHandle() {
+        
+    }
+
+    // Other methods
+    getMessage(e){
+        
+    }
+
+    // Rendering template
+    render() {
+        return <h1 onClick={this.onEventHandle}> {this.state.message} </h1>
+    }
+}
+
+export default WebComponentTest;
+```
+
 ## Prerequisites
 
 To design and develop micro frontend, you must have idea on following,
