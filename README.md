@@ -381,6 +381,8 @@ Once you are done with above steps, you will be able to use the micro frontends 
 
 In this we can use any SPA framework or library as the primary platform for routing, state management, dependancy injection and others. For example *router-slot* is a SPA library has great routing feature. If we gather all components from Angular, React and Vue, then code would be some thing like this,
 
+***index.html***
+
 ```html
 <html>
   <head>
@@ -414,6 +416,57 @@ In this we can use any SPA framework or library as the primary platform for rout
   </body>
 </html>
 ```
+
+### Integrating React.js components and Vue.js components in Angular templates.
+
+This is the scenario where we will be using Angular as the primary platform for wrapping the micro frontends. To achieve this, below steps needs to followed,
+
+*Import all the micro frontend modules directly from clound and the supporting JS libraries in index.html
+
+***index.html***
+
+```javascript
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Application</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Supporting JS modules -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/bootstrap-vue@2.0.0-rc.28/dist/bootstrap-vue.min.js"></script>
+  
+  <!-- Micro frontend modules -->
+  <script src="http://cloud.com/angular-mf-module.js"></script>
+  <script src="http://cloud.com/react-mf-module.js"></script>
+  <script src="http://cloud.com/vue-mf-module.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+```
+As the micro frontend components act as web components which are custom HTML elements, we have to tell Angular that we are loading the components which are not belongs to you.
+
+***app.module.ts***
+
+```javascript
+@NgModule({
+  declarations: [
+    ....
+    ....
+    ....
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+```
+
+Now we can access the micro frontends in any of the Angular components.
 
 ## Communicatiing micro frontend components
 
