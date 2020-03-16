@@ -377,6 +377,44 @@ Once you are done with above steps, you will be able to use the micro frontends 
 * Integrating Angular micro components and Vue.js components in React.js UI.
 * Integrating React.js components and Angular components in Vue.js UI.
 
+### Integrating Angular components, React.js components and Vue.js components together in a SPA
+
+In this we can use any SPA framework or library as the primary platform for routing, state management, dependancy injection and others. For example *router-slot* is a SPA library has great routing feature. If we gather all components from Angular, React and Vue, then code would be some thing like this,
+
+```html
+<html>
+  <head>
+    <base href="/" />
+    <style>
+        
+    </style>
+  </head>
+  <body>
+     
+    <header></header>
+    
+    <div>
+      <angular-component></angular-component>
+      <react-component></react-component>
+      <vue-component></vue-component>
+    </div>
+    
+    <footer></footer>
+    
+    </script>
+    <!-- Supporting JS modules -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    
+    <!-- Micro frontend modules -->
+    <script src="http://cloud.com/angular-mf-module.js"></script>
+    <script src="http://cloud.com/react-mf-module.js"></script>
+    <script src="http://cloud.com/vue-mf-module.js"></script>
+  </body>
+</html>
+```
+
 ## Communicatiing micro frontend components
 
 ![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/Micro%20frontends%20communication.png)
