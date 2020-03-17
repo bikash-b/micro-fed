@@ -671,3 +671,23 @@ or
 > firebase deploy
 
 ## Including AR ( Augmented Reality ) component - Aditional
+
+## Demo
+
+Access the below links to see the demo
+
+For accessing Angular micro frontends - https://angular-frontend-fed77.firebaseapp.com/
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/angular-mf-demo.png)
+
+For accessing React micro frontends - https://react-frontend-aadec.firebaseapp.com/
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/react-mf-demo.png)
+
+For accessing Vue micro frontends - https://vue-frontend-6ccd7.firebaseapp.com/
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/vue-mf-demo.png)
+
+For accessing root application where all above micro frontends integrated - https://micro-fed.firebaseapp.com/
+
+![A typical micro frontend technique](https://github.com/bikash-b/micro-fed/blob/master/assets/micro-fed-demo.png)
