@@ -627,7 +627,47 @@ If firebase cli is installed successfully, login to firebase
 
 This will ask for the authentication, so use your Google account credential and then accept firebase.
 
+Run below command to add to add firebase to project root and each micro frontend root directory.
 
+> firebase init
 
+Use *firebase_public* as the public directory. Create folders *mf* and then *mf/lib* by your own.
+
+Below are additional commands are the building the micro frontends.
+
+    Project name        Command (Normal mode)                             Command (Micro frontend mode)           
+    ---------           ----------------------                            -----------------------------
+    micro-fed           "build-mf": "npx ncp index.html firebase_public   N/A
+                        && npx ncp assets firebase_public/assets"
+                        "deploy": "firebase deploy"  
+  
+    micro-fed/          "build-prod": "ng build --prod                    "build-mf": "ng build --prod --output-hashing none --single-                                                                              bundle true && npm run move-build-mf"
+                                                                          "move-build-mf": "npx ncp dist/micro-fe-ng mf/lib && npx ncp                                                                              mf firebase_public"
+                         && npm run move-build-prod"
+                         "move-build-prod": "npx ncp dist/micro-fe-ng 
+                         firebase_public"
+    demo-frontends/
+    angular-fed
+
+    micro-fed/           "build-prod": "webpack --mode production &&       "build-mf": "webpack --mode production && npm run move-build-                                                                            mf"
+                                                                           "move-build-mf": "npx ncp dist mf/lib && npx ncp mf                                                                                      firebase_public"                                                             
+                         npm run move-build-prod"
+                         "move-build-prod": "npx ncp dist firebase_public" 
+    demo-frontends/
+    react-fed   
+    
+    micro-fed/           "build-prod": "vue-cli-service build              "build-mf": "cross-env vue-cli-service build --target wc --
+                         && npm run move-build-prod"                       name main 'src/components/*.vue' && npm run move-build-mf"  
+                                                                           "move-build-mf": "npx ncp dist mf/lib && npx ncp mf                                                                                      firebase_public"
+    demo-frontends/      "move-build-prod": "npx ncp dist firebase_public"
+    vue-fed
+
+Finally run below command to deploy the micro frontends indivisually from their root directory.
+
+> npm run deploy
+
+or
+
+> firebase deploy
 
 ## Including AR ( Augmented Reality ) component - Aditional
