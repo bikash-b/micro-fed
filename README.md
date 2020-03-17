@@ -619,11 +619,11 @@ In this project we will be using Firebase cloud. You can use any other cloud if 
 
 Install firebase cli package globally using npm
 
-[> npm install -g firebase-tools]
+> npm install -g firebase-tools
 
 If firebase cli is installed successfully, login to firebase
 
-[> firebase login]
+> firebase login
 
 This will ask for the authentication, so use your Google account credential and then accept firebase.
 
