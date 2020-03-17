@@ -615,4 +615,19 @@ Each micro frontend platform has its own way of building the codes. Below are th
 
 ## Deploying micro frontends
 
+In this project we will be using Firebase cloud. You can use any other cloud if you have. For deploying follow the below steps.
+
+Install firebase cli package globally using npm
+
+[> npm install -g firebase-tools]
+
+If firebase cli is installed successfully, login to firebase
+
+[> firebase login]
+
+This will ask for the authentication, so use your Google account credential and then accept firebase.
+
+
+
+
 ## Including AR ( Augmented Reality ) component - Aditional
